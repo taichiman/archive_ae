@@ -4,8 +4,8 @@ CONNECTION_PARAMS_AE = {
   :adapter  => "mysql2",
   :host     => "localhost",
   :username => "root",
-  :password => "qwerty",
-  :database => "ae_project_old",
+  :password => "1",
+  :database => "art_electronics_dev",
   :encoding => "utf8"
 }
 
@@ -128,4 +128,8 @@ end
 class AE_Tagging < ActiveRecord::Base
   establish_connection CONNECTION_PARAMS_AE
   self.table_name = :taggings
+end
+
+class AE_FullDatabase < ActiveRecord::Base
+  establish_connection CONNECTION_PARAMS_AE
 end
